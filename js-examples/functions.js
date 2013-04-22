@@ -23,12 +23,12 @@ test("functions",function(){
     }
 
     //here we assert to prove that these things are actually happening
-    ok(typeof foo === "function", foo());
-    ok(typeof bar === "function", bar());
-    ok(typeof baz === "function", baz());
-    ok(typeof foobar[0] === "function", foobar[0]());
-    ok(typeof foobar[1] === "function", foobar[1]());
-    ok(typeof foobar[2] === "function", foobar[2]());
-    ok(typeof foofoo() === "function", foofoo()());
-    ok(typeof foo.bar === "string", "foo.bar = " + foo.bar);
+    equal(typeof foo, "function", foo());
+    equal(typeof bar, "function", bar());
+    equal(typeof baz, "function", baz());
+    equal(typeof foobar[0], "function", foobar[0]());
+    equal(typeof foobar[1], "function", foobar[1]());
+    equal(typeof foobar[2], "function", foobar[2]());
+    equal(typeof foofoo(), "function", foofoo()());
+    equal(typeof foo.bar, "string", "foo.bar = " + foo.bar);
 });
