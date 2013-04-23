@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hogan Examples</title>
+        <style rel="stylesheet" type="text/css">
+            .red {
+                color: #d00;
+            }
+            .blue {
+                color: #00d;
+            }
+            .green {
+                color: #0d0;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Container with simple template</h2>
+        <div id="simple-container" class="container"></div>
+        <h2>Container using a list of objects</h2>
+        <div id="list-container" class="container"></div>
+    </body>
+    <script src="../libs/jquery-1.9.1.js"></script>
+    <script src="../libs/hogan-2.0.0.js"></script>
+    <script src="templates.js"></script>
+
+    <!-- moustache templates -->
+    <script type="html/template" id="simple">
+        <p>Hello <strong class="{{color}}">{{name}}</strong>, this is Hogan</p>
+    </script>
+
+    <script type="html/template" id="list">
+        <h3>Things {{name}} has to do:</h3>
+        <ul>
+            {{#todos}}
+            <li class="{{#important}}red{{/important}}">{{todo}}</li>
+            {{/todos}}
+        </ul>
+        {{{html}}}
+    </script>
+</html>
