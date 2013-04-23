@@ -1,0 +1,30 @@
+#container {
+    margin: 0 auto;
+    width: 75%;
+}
+
+#comment-list {
+    list-style: none;
+    margin: .5em 0 0 0;
+}
+
+.comment-container {
+    border : #999 solid 1px;
+    border-radius: 6px;
+    padding: 1em;
+    background-color: #fffffd;
+}
+.comment-container textarea{
+    width: 90%;
+}
+.comment-avatar {
+    width: 75px;
+    height: 75px;
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.username {
+    font-weight: bold;
+}
