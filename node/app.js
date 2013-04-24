@@ -5,7 +5,8 @@
 
 var express = require('express'),
     comments = require('./comments'),
-    http = require('http');
+    http = require('http'),
+    cors = require('./cors');
 
 var app = express();
 
@@ -14,6 +15,7 @@ app.configure(function(){
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
+  app.use(cors.crossDomainWhiteList());
 });
 
 app.configure('development', function(){
