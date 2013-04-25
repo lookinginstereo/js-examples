@@ -9,7 +9,7 @@ var Comment = function(obj){
         name : "No Name",
         comment : "No Comment",
         date : new Date().getTime(),
-        avatar : "bmo"
+        avatar : "BMO"
     });
 
     _u.extend(this, properties);
