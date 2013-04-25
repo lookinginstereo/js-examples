@@ -1,6 +1,4 @@
 var CommentsView = Backbone.View.extend({
-    tagName : 'ul',
-    id : "comment-list",
     initialize : function() {
         this.listenTo(this.model,"add", this.addNewComment);
         this.listenTo(this.model,"reset", this.render);
@@ -9,10 +7,10 @@ var CommentsView = Backbone.View.extend({
         var commentView = new CommentView({model : comment});
 
         //this should be part of the view methinks
-        $("#"+this.id).prepend(commentView.html());
+        this.$el.prepend(commentView.html());
     },
     render : function(){
-        $("#"+this.id).empty();
+        this.$el.empty();
         this.model.each(function(comment){
             this.addNewComment(comment);    
         }, this);
