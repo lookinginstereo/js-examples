@@ -5,7 +5,7 @@
 
 #comment-list {
     list-style: none;
-    margin: .5em 0 0 0;
+    margin: 0;
 }
 
 .comment-container {
@@ -13,6 +13,7 @@
     border-radius: 6px;
     padding: 1em;
     background-color: #fffffd;
+    margin: .5em 0 0 0;
 }
 .comment-container textarea{
     width: 90%;
