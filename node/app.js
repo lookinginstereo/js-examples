@@ -23,6 +23,7 @@ app.configure('development', function(){
 });
 
 app.get('/comments', comments.list);
+app.get('/comments/:id', comments.getById);
 app.post('/comments', comments.add);
 app.delete('/comments/:id', comments.delete);
 

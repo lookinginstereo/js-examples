@@ -39,6 +39,17 @@ exports.add = function(req, res, next){
     res.end();
 };
 
+exports.getById = function(req, res, next){
+    var comment = _u.findWhere(comments,{id : parseInt(req.params.id)});
+    console.log("comment is: " + typeof comment);
+    if(typeof comment !== "undefined"){
+        res.status = 200;
+        res.end(JSON.stringify(comment));
+    }else{
+        res.send(404, "No Comment Found with given id");
+    }
+};
+
 exports.delete = function(req, res, next){
 
 };
