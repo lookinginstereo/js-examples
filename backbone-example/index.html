@@ -32,25 +32,38 @@
             </div>
         </form>
         <ul id="comment-list">
-            <li class="comment-container row-fluid">
-                <div class="comment-row span2">
-                    <div class="row-fluid username">
-                        Willie
-                    </div>
-                    <div class="comment-avatar row-fluid">
-                        <img src="img/BMO.png">
-                    </div>
-                    <div class="row-fluid">
-                        <strong>posted:</strong>
-                        <div class="date"> March 29, 1986 3:14am </div>
-                    </div>
-                </div>
-                <div class="comment-row span10">
-                    This is an example comment, its probably as useful as a
-                    comment would be on anything else
-                </div>
-            </li>
         </ul>
     </div>
 <body>
+<script src="../libs/underscore.js"></script>
+<script src="../libs/jquery-1.9.1.js"></script>
+<script src="../libs/hogan-2.0.0.js"></script>
+<script src="../libs/backbone.js"></script>
+
+<script src="models/comment.js"></script>
+<script src="views/comment.js"></script>
+<script src="views/comments.js"></script>
+<script src="collections/comments.js"></script>
+<script src="core.js"></script>
+
+<script type="text/template" id="comment-template">
+    <li class="comment-container row-fluid">
+        <div class="comment-row span2">
+            <div class="row-fluid username">
+                {{name}}
+            </div>
+            <div class="comment-avatar row-fluid">
+                <img src="img/{{avatar}}.png">
+            </div>
+            <div class="row-fluid">
+                <strong>posted:</strong>
+                <div class="date">{{date}}</div>
+            </div>
+        </div>
+        <div class="comment-row span10">
+            {{comment}}
+        </div>
+    </li>
+</script>
+
 </html>
