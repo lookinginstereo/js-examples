@@ -3,6 +3,10 @@ $(function(){
     var commentsView = new CommentsView({
         model : comments
     });
+    var postForm = new PostForm({
+        el : $("#comment-post"),
+        model : comments
+    });
 
     comments.fetch({reset:true});
 
