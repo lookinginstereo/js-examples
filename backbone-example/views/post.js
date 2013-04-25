@@ -13,7 +13,8 @@ var PostForm = Backbone.View.extend({
                 comment : comment,
                 avatar : avatar
             }));
-            console.log("submit!");
+            //empty after submitting post
+            this.$el.find("textarea[name='comment']").val("");
         }else{
             console.log("try again!");
         }
