@@ -5,7 +5,8 @@ var CommentView = Backbone.View.extend({
         this.template = Hogan.compile($("#comment-template").text());
     },
     html : function(){
-        var html = this.template.render(this.model.attributes);
+        var date = new Date(this.model.attributes.date).toString();
+        var html = this.template.render(_.extend(this.model.attributes, {dateString : date}));
         return html;
     }
 });
