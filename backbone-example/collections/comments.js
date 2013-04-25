@@ -5,6 +5,8 @@ var CommentCollection = Backbone.Collection.extend({
         this.listenTo(this,"add",this.saveModel);
     },
     saveModel : function(model){
-        model.save();
+        if(model.isNew()){
+            model.save();
+        }
     }
 });
