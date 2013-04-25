@@ -4,7 +4,7 @@ var PostForm = Backbone.View.extend({
         'change .select-avatar': 'updateAvatar'
     },
     submit : function(){
-        var avatar = this.getAvatar(),
+        var avatar = this.getAvatar().val(),
             username = this.getUserName(),
             comment = this.getComment();
         if(comment && username){
@@ -21,10 +21,11 @@ var PostForm = Backbone.View.extend({
     },
     updateAvatar : function(){
         var avatar = this.getAvatar();
-        this.$el.find(".comment-avatar img").attr("src","img/"+avatar+".png");
+        this.$el.find(".comment-avatar img").attr("src","img/"+avatar.val()+".png");
+        this.$el.find("input[name='name']").val(avatar.text());
     },
     getAvatar : function(){
-        return this.$el.find(".select-avatar option:selected").val();
+        return this.$el.find(".select-avatar option:selected");
     },
     getUserName : function(){
         var elem = this.$el.find("input[name='name']");
