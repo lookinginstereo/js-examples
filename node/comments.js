@@ -17,8 +17,6 @@ var Comment = function(obj){
 
 //the array -- err -- "database" 
 var comments = [];
-//add a new empty comment for debugging
-comments.push(new Comment({}));
 
 exports.list = function(req, res, next){
     res.status = 200;
